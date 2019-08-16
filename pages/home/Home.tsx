@@ -6,7 +6,11 @@ import {
   Image
 } from 'react-native'
 
+import { inject, observer } from 'mobx-react'
+
 import CookBook from '../cookbook/CookBook'
+import Map from '../map/Map'
+import More from '../more/More'
 
 import styles from './styles'
 
@@ -22,18 +26,19 @@ const more = require('../../assets/images/more.png')
 const moreActive = require('../../assets/images/more-active.png')
 
 interface State {
-  selectedTab: string,
-  isShowMap: boolean
+  selectedTab: string
 }
 
 interface Props {
-  navigation?: any
+  navigation?: any,
+  store?: any
 }
 
+@inject('store')
+@observer
 export default class Home extends Component<Props, State> {
   state: State = {
-    selectedTab: 'home',
-    isShowMap: true
+    selectedTab: 'home'
   }
 
   render() {
@@ -60,13 +65,13 @@ export default class Home extends Component<Props, State> {
           <View><Text>hotlist</Text></View>
         </TabNavigator.Item>
         {
-          this.state.isShowMap && (<TabNavigator.Item
+          this.props.store.showMap && (<TabNavigator.Item
             selected={this.state.selectedTab === 'map'}
             title="美食地图"
             renderIcon={() => <Image source={location} style={styles.imgSize} />}
             renderSelectedIcon={() => <Image source={locationActive} style={styles.imgSize} />}
             onPress={() => this.setState({ selectedTab: 'map' })}>
-            <View><Text>map</Text></View>
+            <Map></Map>
           </TabNavigator.Item>)
         }
         <TabNavigator.Item
@@ -75,7 +80,7 @@ export default class Home extends Component<Props, State> {
           renderIcon={() => <Image source={more} style={styles.imgSize} />}
           renderSelectedIcon={() => <Image source={moreActive} style={styles.imgSize} />}
           onPress={() => this.setState({ selectedTab: 'profile' })}>
-          <View><Text>more</Text></View>
+          <More></More>
         </TabNavigator.Item>
       </TabNavigator>
     )

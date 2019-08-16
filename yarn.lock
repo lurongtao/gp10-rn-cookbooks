@@ -1893,7 +1893,7 @@ escape-html@~1.0.3:
   resolved "https://registry.npm.taobao.org/escape-html/download/escape-html-1.0.3.tgz#0258eae4d3d0c0974de1c169188ef0051d1d1988"
   integrity sha1-Aljq5NPQwJdN4cFpGI7wBR0dGYg=
 
-escape-string-regexp@^1.0.2, escape-string-regexp@^1.0.5:
+escape-string-regexp@1.0.5, escape-string-regexp@^1.0.2, escape-string-regexp@^1.0.5:
   version "1.0.5"
   resolved "https://registry.npm.taobao.org/escape-string-regexp/download/escape-string-regexp-1.0.5.tgz#1b61c0562190a8dff6ae3bb2cf0200ca130b86d4"
   integrity sha1-G2HAViGQqN/2rjuyzwIAyhMLhtQ=
@@ -2647,7 +2647,7 @@ inquirer@^3.0.6:
     strip-ansi "^4.0.0"
     through "^2.3.6"
 
-invariant@^2.2.2, invariant@^2.2.4:
+invariant@2.2.4, invariant@^2.2.2, invariant@^2.2.4:
   version "2.2.4"
   resolved "https://registry.npm.taobao.org/invariant/download/invariant-2.2.4.tgz#610f3c92c9359ce1db616e538008d23ff35158e6"
   integrity sha1-YQ88ksk1nOHbYW5TgAjSP/NRWOY=
@@ -4282,6 +4282,14 @@ react-native-web@^0.11.4:
     normalize-css-color "^1.0.2"
     prop-types "^15.6.0"
     react-timer-mixin "^0.13.4"
+
+react-native-webview@^6.9.0:
+  version "6.9.0"
+  resolved "https://registry.npm.taobao.org/react-native-webview/download/react-native-webview-6.9.0.tgz#d637618fe65ddc9972a55a1d181fd6879a2fcebd"
+  integrity sha1-1jdhj+Zd3JlypVodGB/Wh5ovzr0=
+  dependencies:
+    escape-string-regexp "1.0.5"
+    invariant "2.2.4"
 
 "react-native@https://github.com/expo/react-native/archive/sdk-34.0.0.tar.gz":
   version "0.59.8"
