@@ -11,11 +11,13 @@ import store from './store/'
 
 import Home from './pages/home/Home'
 import HotList from './pages/hotlist/HotList'
+import Detail from './pages/details/Detail'
 
 const AppNavigator = createStackNavigator(
   {
     Home,
-    HotList
+    HotList,
+    Detail
   },
   {
     initialRouteName: "Home",

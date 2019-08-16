@@ -45,7 +45,7 @@ export default class Home extends Component<Props, State> {
           renderIcon={() => <Image source={cookBook} style={styles.imgSize} />}
           renderSelectedIcon={() => <Image source={cookBookActive} style={styles.imgSize} />}
           onPress={() => this.setState({ selectedTab: 'home' })}>
-          <CookBook></CookBook>
+          <CookBook navigation={this.props.navigation}></CookBook>
         </TabNavigator.Item>
         <TabNavigator.Item
           selected={this.state.selectedTab === 'hotlist'}

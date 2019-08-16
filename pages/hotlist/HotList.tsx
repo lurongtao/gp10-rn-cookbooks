@@ -5,6 +5,8 @@ import {
   Text
 } from 'react-native'
 
+import List from '../../components/List'
+
 interface Props {
   
 }
@@ -28,11 +30,7 @@ export default class HotList extends Component<Props, State> {
 
   render() {
     return (
-      <View>
-        <Text>
-          hotlist
-        </Text>
-      </View>
+      <List start={0} count={20}></List>
     )
   }
 }

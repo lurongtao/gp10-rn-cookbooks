@@ -7,13 +7,23 @@ import http from '../utils/http'
 
 class Store {
   @observable
-  swiper: Array<Object> = []
+  list: Array<any> = []
+
+  @observable
+  menu: Array<any> = []
 
   @action.bound
   async loadData() {
-    let data = await http.get('http://workdev:8000/api/list')
-    this.swiper = data
-    console.log(this.swiper)
+    let dataList = await http.get('http://workdev:8000/api/list')
+    this.list = [...dataList]
+
+    let dataMenu = await http.get('http://workdev:8000/api/menu')
+    this.menu = [...dataMenu]
+  }
+
+  async loadFreshData() {
+    let dataList = await http.get('http://workdev:8000/api/list')
+    this.list = [...dataList.slice(0, 2), ...this.list]
   }
 }
 
