@@ -11,6 +11,7 @@ import { inject, observer } from 'mobx-react'
 import CookBook from '../cookbook/CookBook'
 import Map from '../map/Map'
 import More from '../more/More'
+import Camera from '../more/Camera'
 
 import styles from './styles'
 
@@ -80,7 +81,8 @@ export default class Home extends Component<Props, State> {
           renderIcon={() => <Image source={more} style={styles.imgSize} />}
           renderSelectedIcon={() => <Image source={moreActive} style={styles.imgSize} />}
           onPress={() => this.setState({ selectedTab: 'profile' })}>
-          <More></More>
+          {/* <More></More> */}
+          <Camera></Camera>
         </TabNavigator.Item>
       </TabNavigator>
     )

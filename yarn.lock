@@ -1997,6 +1997,14 @@ expo-asset@~6.0.0:
     path-browserify "^1.0.0"
     url-parse "^1.4.4"
 
+expo-camera@^6.0.0:
+  version "6.0.0"
+  resolved "https://registry.npm.taobao.org/expo-camera/download/expo-camera-6.0.0.tgz?cache=0&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fexpo-camera%2Fdownload%2Fexpo-camera-6.0.0.tgz#74db78874f87de7adcd63db0e96591c331fefd28"
+  integrity sha1-dNt4h0+H3nrc1j2w6WWRwzH+/Sg=
+  dependencies:
+    lodash "^4.6.0"
+    prop-types "^15.6.0"
+
 expo-constants@~6.0.0:
   version "6.0.0"
   resolved "https://registry.npm.taobao.org/expo-constants/download/expo-constants-6.0.0.tgz#ff4598985ba006e24949be3f05be7429e5bedacf"
@@ -2035,7 +2043,7 @@ expo-location@~6.0.0:
   dependencies:
     invariant "^2.2.4"
 
-expo-permissions@~6.0.0:
+expo-permissions@^6.0.0, expo-permissions@~6.0.0:
   version "6.0.0"
   resolved "https://registry.npm.taobao.org/expo-permissions/download/expo-permissions-6.0.0.tgz#2943f1aa98de833b88cea73cf03d18d08957cb68"
   integrity sha1-KUPxqpjegzuIzqc88D0Y0IlXy2g=
